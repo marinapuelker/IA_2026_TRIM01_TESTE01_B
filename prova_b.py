@@ -14,8 +14,18 @@ Instruções:
 # ==============================================================================
 # Dado um dicionário onde as chaves são nomes de alunos e os valores são as suas notas,
 # retorne um NOVO dicionário contendo apenas os alunos aprovados (nota >= 7.0).
+
+ alunos = {'nome' : 'nota'}
+ alunos_aprovados = []
+
 def filtrar_aprovados(diario_notas):
-    pass
+    for alunos in diario_notas:
+        if nota >= 7:
+            alunos_aprovados.append(aluno)
+        else:
+            alunos_reprovados.append(aluno)
+
+print(alunos('Juca' : '7''))
 
 
 # ==============================================================================
@@ -24,8 +34,18 @@ def filtrar_aprovados(diario_notas):
 # Tem uma lista de produtos representada por tuplas, ex: ("Teclado", 150). 
 # Use a função `sorted` com uma função `lambda` para retornar essa lista 
 # ordenada pelo preço (o segundo elemento da tupla) em ordem crescente.
+
+produtos = [('Teclado', 150), ('computador', 300), ('mouse', 50)]
 def ordenar_por_preco(produtos):
-    pass
+    return sorted(produtos)
+
+func_lambida = lambda produto: produto[0]
+
+
+print(func_lambida)
+
+
+
 
 
 # ==============================================================================
@@ -34,8 +54,13 @@ def ordenar_por_preco(produtos):
 # Dada uma lista de temperaturas em Celsius, use `map` e `lambda` para retornar 
 # uma nova lista com as temperaturas convertidas para Fahrenheit.
 # Fórmula: F = (C * 9/5) + 32
-def converter_para_fahrenheit(temperaturas_celsius):
-    pass
+
+celsius_lambda = lambda x : x * 1.8 + 32
+print(celsius_lambda(10))
+
+lista = [ 10, 20, 30, 35]
+print(list(map(celsius_lambda, lista)))
+
 
 
 # ==============================================================================
@@ -62,7 +87,8 @@ def divisao_recursiva(numerador, denominador):
 # como argumento padrão numa função de pré-processamento de dados."
 
 RESPOSTA_Q5 = """
-Escreva a sua resposta teórica aqui...
+Os mutáveis, como as listas, podem ser alterados depois de criados. Os imutáveis, como as tuplas, não podem ser alteradas depois de criadas.
+Um exemplo é a lista se tornar uma variável global dentro da função, acumulando os resultados que foram obtidos antes.  
 """
 
 if __name__ == "__main__":
@@ -71,3 +97,4 @@ if __name__ == "__main__":
     # print(divisao_recursiva(20, 5)) # Deve imprimir 4
     # print(divisao_recursiva(17, 5)) # Deve imprimir 3
     pass
+'''
